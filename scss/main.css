@@ -1,0 +1,747 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  direction: rtl;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(../fonts/iransans/woff/IRANSansX-Bold.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(../fonts/iransans/woff/IRANSansX-DemiBold.woff);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(../fonts/iransans/woff/IRANSansX-Medium.woff);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(../fonts/iransans/woff/IRANSansX-Light.woff);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(../fonts/iransans/woff/IRANSansX-Thin.woff);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(../fonts/iransans/woff/IRANSansX-Regular.woff);
+}
+
+@font-face {
+  font-family: nastaliq;
+  src: url(../fonts/IranNastaliq.ttf);
+}
+
+body {
+  color: black;
+  font-family: iransans;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: url(../images//gallery-img-5.jpeg) center no-repeat;
+  background-size: cover;
+  font-family: iransans;
+}
+
+header .header__container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+header .header__nav {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header__nav .login {
+  border: 1px solid #e22929;
+  padding: 8px 14px;
+  font-family: iransans;
+  font-weight: bold;
+  margin-left: 8px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #e22929;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header .header__nav .login:hover {
+  color: white;
+  background-color: #e22929;
+}
+
+header .header__nav .signup {
+  background-color: #262626;
+  border: 1px solid #262626;
+  border-radius: 5px;
+  font-family: iransans;
+  font-weight: bold;
+  color: white;
+  padding: 8px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header .header__nav .signup:hover {
+  color: #262626;
+  background-color: transparent;
+  border: 1px solid #262626;
+}
+
+header .header__nav .header__logo {
+  margin-right: auto;
+  font-size: 70px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #e22929;
+}
+
+header .header__iconDown {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #e22929;
+  font-size: 32px;
+}
+
+header .header__social {
+  position: absolute;
+  bottom: 30px;
+  left: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+}
+
+header .header__social span {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header .header__social span:hover {
+  color: #e22929;
+}
+
+/*========================GALLERY===================*/
+.gallery {
+  background-color: white;
+  color: black;
+}
+
+.gallery__container {
+  height: 100vh;
+  text-align: center;
+  font-family: iransans;
+}
+
+.gallery__container h2 {
+  padding-top: 2rem;
+  font-weight: bold;
+}
+
+.gallery__cards {
+  padding: 2rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  border: 0;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.card:hover .card__overlay {
+  left: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card .discount {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-align: center;
+  padding-top: 12px;
+  color: white;
+  font-size: bold;
+  font-family: iransans;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: #ef4123;
+}
+
+.card__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.card__overlay h1 {
+  padding-top: 1rem;
+}
+
+.card__overlay p {
+  padding: 5px 0;
+}
+
+.card__overlay .card__btn {
+  background-color: #e22929;
+  border: 1px solid #e22929;
+  font-family: iransans;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 16px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: white;
+}
+
+.card__overlay .card__btn:hover {
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+/*========================APP PROMOTION===================*/
+.appPromotion {
+  text-align: center;
+  background-color: #42a4a7;
+  padding: 2rem 0;
+}
+
+.appPromotion__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: white;
+  font-family: iransans;
+}
+
+.appPromotion__container .appPromotion__img img {
+  width: 340px;
+}
+
+.appPromotion__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.appPromotion__info h1 {
+  font-weight: bold;
+}
+
+.appPromotion__info p {
+  margin: 12px 0 40px 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.appPromotion__info .apps {
+  margin-top: 3rem;
+}
+
+.appPromotion__info .apps img {
+  width: 200px;
+  cursor: pointer;
+}
+
+.getNum input {
+  text-align: center;
+  padding: 16px 40px;
+  border-radius: 0 9px 9px 0;
+  outline: none;
+  font-size: 24px;
+}
+
+.getNum ::-webkit-input-placeholder {
+  color: lightgray;
+}
+
+.getNum :-ms-input-placeholder {
+  color: lightgray;
+}
+
+.getNum ::-ms-input-placeholder {
+  color: lightgray;
+}
+
+.getNum ::placeholder {
+  color: lightgray;
+}
+
+.getNum button {
+  padding: 16px 14px;
+  margin-right: -12px;
+  border-radius: 9px 0 0 9px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: #e22929;
+}
+
+.getNum button:hover {
+  background-color: rgba(241, 10, 10, 0.979);
+}
+
+/*========================BRANDS===================*/
+.brands {
+  padding-top: 3rem;
+  background-color: white;
+  color: black;
+}
+
+.brands__container {
+  height: 70vh;
+  text-align: center;
+  font-family: iransans;
+}
+
+.brands__container h2 {
+  padding-top: 1rem;
+  font-weight: bold;
+}
+
+.brands__cards {
+  padding: 2rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.brand {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  position: relative;
+  border: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.brand:hover .brand__overlay {
+  left: 0;
+}
+
+.brand__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.brand__overlay h1 {
+  padding: 2rem;
+  font-size: 18px;
+}
+
+.brand__overlay h1 a {
+  color: white;
+}
+
+/*========================FOOTER===================*/
+footer {
+  padding: 2rem 0;
+  background-color: #383c47;
+  color: white;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.footer__container h3 {
+  padding-bottom: 1rem;
+  font-size: 18px;
+}
+
+.apps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.apps img {
+  cursor: pointer;
+}
+
+.apps img + img {
+  margin-right: 8px;
+}
+
+.footer__feedback {
+  padding-right: 2rem;
+}
+
+.footer__feedback a {
+  color: white;
+}
+
+.footer__feedback p {
+  margin-bottom: 0;
+}
+
+.footer__socials ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer__socials ul li {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.footer__socials ul li i {
+  font-size: 24px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.footer__socials ul li i:hover {
+  color: #e22929;
+}
+
+.footer__socials-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+/* =====================MEDIA QUERIES(TABLET)==================== */
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 27px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 19px;
+  }
+  /*========================GALLERY===================*/
+  .gallery__container {
+    height: auto;
+  }
+  .gallery__cards {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .card__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+  }
+  .card__overlay h1 {
+    padding-top: 12px;
+    font-size: 22px;
+  }
+  .card__overlay p {
+    padding: 3px 0;
+    font-size: 16px;
+  }
+  .card__overlay .card__btn {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  .card .discount {
+    width: 35px;
+    height: 35px;
+    top: 8px;
+    left: 8px;
+    padding-top: 9px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  /*========================APP_PROMOTION===================*/
+  .appPromotion__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .appPromotion__info .apps {
+    margin-top: 2rem;
+  }
+  .appPromotion__info .apps img {
+    width: 150px;
+  }
+  .appPromotion__img img {
+    width: 250px;
+    margin-right: 85px;
+  }
+  .getNum input {
+    padding: 12px 30px;
+    border-radius: 0 9px 9px 0;
+    font-size: 18px;
+  }
+  .getNum button {
+    padding: 12px 10px;
+    margin-right: -12px;
+    border-radius: 9px 0 0 9px;
+    font-size: 18px;
+  }
+  /*========================BRAND===================*/
+  .brands__container {
+    height: auto;
+  }
+  .brands__cards {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .brand__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .brand__overlay h1 {
+    padding: 1rem;
+    font-size: 16px;
+  }
+  .brand__overlay h1 a {
+    color: white;
+  }
+  /*========================FOOTER===================*/
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .footer__container h3 {
+    padding-bottom: 9px;
+    font-size: 14px;
+  }
+  footer .apps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .apps img {
+    margin-bottom: 8px;
+  }
+  footer .apps img + img {
+    margin-right: 0;
+  }
+  .footer__socials ul li {
+    margin-right: 5px;
+  }
+  .footer__socials ul li i {
+    font-size: 18px;
+  }
+  .footer__socials-menu {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/* =====================MEDIA QUERIES(PHONE)==================== */
+@media screen and (max-width: 600px) {
+  /*========================HEADER===================*/
+  header .header__social {
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+  header .header__nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .header__nav .header__logo {
+    display: none;
+  }
+  /*========================APP-PROMITION===================*/
+  .appPromotion__info .apps img {
+    width: 130px;
+  }
+  /*========================GALLERY===================*/
+  .gallery__cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .gallery__cards .card {
+    margin: 0 1rem;
+  }
+  .card__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+  }
+  .card__overlay h1 {
+    padding-top: 2rem;
+    font-size: 22px;
+  }
+  .card__overlay .card__btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  /*========================APP_PROMOTION===================*/
+  .appPromotion__info h1 {
+    font-size: 24px;
+  }
+  .appPromotion__info p {
+    padding: 12px 2rem 2rem 2rem;
+  }
+  .getNum {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .getNum input {
+    border-radius: 9px;
+    margin-bottom: 8px;
+  }
+  .getNum button {
+    padding: 8px 5px;
+    margin-right: 0;
+    border-radius: 9px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  /*========================BRAND===================*/
+  .brands__cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .brands__cards .card {
+    margin: 0 1rem;
+  }
+  .brand__overlay h1 {
+    padding: 2rem 0;
+    font-size: 18px;
+  }
+  /*========================FOOTER===================*/
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .footer__container h3 {
+    padding-bottom: 5px;
+  }
+  .footer__container .footer__feedback {
+    padding: 2rem 0;
+  }
+  .footer__container .footer__socials li {
+    margin-right: 12px;
+  }
+  .footer__container .footer__socials li i {
+    font-size: 22px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

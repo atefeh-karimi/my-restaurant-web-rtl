@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  direction: rtl;
+}
+
+$color-dark: #262626;
+$color-primary: #d3ab55;
+$color-secondary: #df6400;
+$color-red: rgb(226, 41, 41);
+
+@font-face {
+  font-family: iransans;
+  src: url(../fonts/iransans/woff/IRANSansX-Bold.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(../fonts/iransans/woff/IRANSansX-DemiBold.woff);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(../fonts/iransans/woff/IRANSansX-Medium.woff);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(../fonts/iransans/woff/IRANSansX-Light.woff);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(../fonts/iransans/woff/IRANSansX-Thin.woff);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(../fonts/iransans/woff/IRANSansX-Regular.woff);
+}
+
+@font-face {
+  font-family: nastaliq;
+  src: url(../fonts/IranNastaliq.ttf);
+}
+
+@mixin flexLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin positionHedear($topValue) {
+  position: absolute;
+  top: $topValue;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin btnStyle {
+  background-color: $color-red;
+  border: 1px solid $color-red;
+  font-family: iransans;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 16px;
+  transition: all 0.2s;
+  color: white;
+}
+
+@mixin btnStyleHover {
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+}
