@@ -642,13 +642,16 @@ footer {
 @media screen and (max-width: 600px) {
   /*========================HEADER===================*/
   header {
-    height: 100vh;
+    height: 80vh;
   }
   header .header__social {
     left: 50%;
     bottom: 0;
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
+  }
+  header .header__container {
+    height: 80vh;
   }
   header .header__nav {
     -webkit-box-pack: center;
