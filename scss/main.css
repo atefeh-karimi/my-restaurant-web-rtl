@@ -642,7 +642,7 @@ footer {
 @media screen and (max-width: 600px) {
   /*========================HEADER===================*/
   header {
-    height: 80vh;
+    height: 100vh;
   }
   header .header__social {
     left: 50%;
@@ -651,7 +651,7 @@ footer {
             transform: translate(-50%);
   }
   header .header__container {
-    height: 80vh;
+    height: 90vh;
   }
   header .header__nav {
     -webkit-box-pack: center;

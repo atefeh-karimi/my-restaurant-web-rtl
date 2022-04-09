@@ -531,14 +531,14 @@ footer {
 @media screen and (max-width: 600px) {
   /*========================HEADER===================*/
   header {
-    height: 80vh;
+    height: 100vh;
     .header__social {
       left: 50%;
       bottom: 0;
       transform: translate(-50%);
     }
     .header__container {
-      height: 80vh;
+      height: 90vh;
     }
 
     .header__nav {
